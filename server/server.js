@@ -42,9 +42,9 @@ app.get('/todos/:id', (req, res)=>{
     if(!todo){
       return res.status(404).send('Unable to find Todo');
     }
-    res.status(200).end({todo});
+    res.status(200).send({todo});
   }).catch((err)=>{
-    res.status(400).send(2);
+    res.status(400).send();
   });
 });
 
